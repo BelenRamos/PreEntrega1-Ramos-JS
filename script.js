@@ -12,7 +12,7 @@ let cantAlMB = parseInt(prompt("Curso B: Ingrese la cantidad de alumnos masculin
 let inasFB = parseInt(prompt("Curso B: Ingrese la cantidad de inasistencias femeninas:"));
 let inasMB = parseInt(prompt("Curso B: Ingrese la cantidad de inasistencias masculinas:"));
 
-// Funciones (sin cambios)
+// Funciones 
 
 function calcularInasistenciasTotales(inasF, inasM) {
   return inasF + inasM;
@@ -54,8 +54,9 @@ function calcularPorcentajeAsistencia(asisTotal, asistenciaPerfecta) {
   return (asisTotal / asistenciaPerfecta) * 100;
 }
 
+let continuar=true
 // Menú de opciones
-while (true) {
+while (continuar) {
   console.log("Seleccione una opción:");
   console.log("1. Calcular asistencia para el Curso A");
   console.log("2. Calcular asistencia para el Curso B");
@@ -93,7 +94,9 @@ while (true) {
     case 3:
       // Salir del programa
       console.log("¡Hasta luego!");
-      process.exit(0);
+      continuar=false;
+      break;
+      
 
     default:
       console.log("Opción no válida. Por favor, ingrese una opción válida.");
