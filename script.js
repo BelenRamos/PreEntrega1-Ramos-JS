@@ -59,7 +59,7 @@ while (continuar) {
 
       let asisF = calcularAsistenciaFemenina(diasHabiles, cantAlF, inasF);
       let asisM = calcularAsistenciaMasculina(diasHabiles, cantAlM, inasM);
-      let asisTotal = calcularAsistenciaTotal(asisF, asis);
+      let asisTotal = calcularAsistenciaTotal(asisF, asisM);
       let porcentajeAsistencia = calcularPorcentajeAsistencia(asisTotal, calcularAsistenciaPerfecta(calcularTotalAlumnos(cantAlF, cantAlM), diasHabiles));
 
       console.log("Asistencia para el Curso A:");
@@ -71,8 +71,8 @@ while (continuar) {
 
      
     case 2:
-      let nombre = parse(prompt("Hola profesor/a. Por favor digame su nombre:"));
-      console.log("Hola "+ nombre);
+      let nombre = prompt("Hola profesor/a. Por favor digame su nombre:");
+      alert("Hola "+ nombre);
       break;
       
     case 3:
