@@ -39,11 +39,12 @@ function calcularPorcentajeAsistencia(asisTotal, asistenciaPerfecta) {
   return (asisTotal / asistenciaPerfecta) * 100;
 }
 
+
 let continuar=true
 // Menú de opciones
 while (continuar) {
   console.log("Seleccione una opción:");
-  console.log("1. Calcular asistencia para el Curso ");
+  console.log("1. Calcular asistencia para su Curso");
   console.log("2. Saludo");
   console.log("3. Salir");
 
@@ -62,11 +63,11 @@ while (continuar) {
       let asisTotal = calcularAsistenciaTotal(asisF, asisM);
       let porcentajeAsistencia = calcularPorcentajeAsistencia(asisTotal, calcularAsistenciaPerfecta(calcularTotalAlumnos(cantAlF, cantAlM), diasHabiles));
 
-      console.log("Asistencia para el Curso A:");
-      console.log("Asistencia Femenina: " + asisF);
-      console.log("Asistencia Masculina: " + asisM);
-      console.log("Asistencia Total: " + asisTotal);
-      console.log("Porcentaje de Asistencia: " + porcentajeAsistencia.toFixed(2) + "%");
+      console.log("Asistencia para el Curso:");
+      console.log("-Asistencia Femenina: " + asisF);
+      console.log("-Asistencia Masculina: " + asisM);
+      console.log("-Asistencia Total: " + asisTotal);
+      console.log("-Porcentaje de Asistencia: " + porcentajeAsistencia.toFixed(2) + "%");
       break;
 
      
