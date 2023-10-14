@@ -44,17 +44,18 @@ let continuar=true
 while (continuar) {
   console.log("Seleccione una opción:");
   console.log("1. Calcular asistencia para el Curso ");
-  console.log("2. Salir");
+  console.log("2. Saludo");
+  console.log("3. Salir");
 
   let opcion = parseInt(prompt("Ingrese el número de la opción deseada:"));
 
   switch (opcion) {
     case 1:
       let diasHabiles = parseInt(prompt("Ingrese el número de días hábiles:"));
-      let cantAlFB = parseInt(prompt("Curso B: Ingrese la cantidad de alumnos femeninos:"));
-      let cantAlMB = parseInt(prompt("Curso B: Ingrese la cantidad de alumnos masculinos:"));
-      let inasFB = parseInt(prompt("Curso B: Ingrese la cantidad de inasistencias femeninas:"));
-      let inasMB = parseInt(prompt("Curso B: Ingrese la cantidad de inasistencias masculinas:"));
+      let cantAlF = parseInt(prompt("Ingrese la cantidad de alumnos femeninos:"));
+      let cantAlM = parseInt(prompt("Ingrese la cantidad de alumnos masculinos:"));
+      let inasF = parseInt(prompt("Ingrese la cantidad de inasistencias femeninas:"));
+      let inasM = parseInt(prompt("Ingrese la cantidad de inasistencias masculinas:"));
 
       let asisF = calcularAsistenciaFemenina(diasHabiles, cantAlF, inasF);
       let asisM = calcularAsistenciaMasculina(diasHabiles, cantAlM, inasM);
@@ -68,7 +69,13 @@ while (continuar) {
       console.log("Porcentaje de Asistencia: " + porcentajeAsistencia.toFixed(2) + "%");
       break;
 
+     
     case 2:
+      let nombre = parse(prompt("Hola profesor/a. Por favor digame su nombre:"));
+      console.log("Hola "+ nombre);
+      break;
+      
+    case 3:
       // Salir del programa
       console.log("¡Hasta luego!");
       continuar=false;
